@@ -22,14 +22,14 @@ function Notes() {
   }
 
   useEffect(() => {
-    setErrorMessage("");
+
   }, [newNote.title, newNote.content]);
 
   const handleAddNote = () => {
     if (newNote.title.trim() === "" || newNote.content.trim() === "") {
       setErrorMessage("Both title and content are required.");
     } else {
-      setErrorMessage(""); // Clear any previous error message
+      // Clear any previous error message
       if (editingNoteId !== null) {
         updateNote({ ...newNote, id: editingNoteId });
         setEditingNoteId(null);

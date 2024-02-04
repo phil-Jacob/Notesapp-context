@@ -1,7 +1,7 @@
 import React, {  useContext } from "react";
 import { NotesContext } from "../Context/Notecontext";
 import { TaskContext } from "../Context/Taskcontext";
-import { useSelectedTask } from "../Context/SelectedTaskContext"; // Provide the correct path
+
 import NoteContent from "./NoteContent";
 import TaskContent from "./TaskContent";
 

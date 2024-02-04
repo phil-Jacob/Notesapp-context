@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 function Tasks({id,content}) {
-  const[isChecked,setisChecked] = useState(false);
+  const[isChecked] = useState(false);
   const[isStarred,setisStarred] = useState(false);
 
 
