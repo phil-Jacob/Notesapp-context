@@ -9,7 +9,7 @@ function Tasks() {
   const { tasks, addTask } = useContext(TaskContext);
   const [newTask, setNewTask] = useState({ title: "" });
  
-  const [ setErrorMessage] = useState("");
+
 
   useEffect(() => {
     // Clear the error message when the input changes
@@ -17,11 +17,11 @@ function Tasks() {
   }, [newTask.title]);
  
   const handleAddTask = () => {
+     
     // Check if the title is not empty
     if (newTask.title.trim() === "") {
-      setErrorMessage("Title is required.");
+      alert("Title is required.");
     } else {
-      setErrorMessage(""); // Clear any previous error message
       addTask({ ...newTask, id: Date.now() });
       setNewTask({ title: "" });
     }
